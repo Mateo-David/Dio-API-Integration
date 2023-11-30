@@ -29,4 +29,11 @@ class PostUserDataController extends GetxController {
     print(responseBody);
     return responseBody;
   }
+
+  patchUserData() async {
+    var response = await APICrudOperation().patchUserData(putUrl);
+    var responseBody = response.data;
+    print(responseBody);
+    return responseBody;
+  }
 }

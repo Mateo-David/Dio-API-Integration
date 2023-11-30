@@ -22,9 +22,19 @@ class APICrudOperation {
   }
 
   putUserData(putUrl) async {
-    return await Dio().put(putUrl, data: {
-      "title": "Muneeb Shahid putUserData",
-      "body": "Fluter Developer putUserData",
-    },);
+    return await Dio().put(
+      putUrl,
+      data: {
+        "title": "Muneeb Shahid putUserData",
+        "body": "Fluter Developer putUserData",
+      },
+    );
+  }
+
+  patchUserData(patchurl) async {
+    return await Dio().patch(patchurl,
+    data: {
+      "title": "Muhammad Ali"
+    });
   }
 }
