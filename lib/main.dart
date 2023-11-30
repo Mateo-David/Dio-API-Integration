@@ -1,5 +1,6 @@
 import 'package:dio_project/routes/approutes.dart';
 import 'package:dio_project/view/home/home_screen.dart';
+import 'package:dio_project/view/post_user_data/post_user_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
           ),
-          home: GetDataScreen(),
+          home: PostUserData(),
           // getPages: AppRoutes.appRoutes(),
         );
       },

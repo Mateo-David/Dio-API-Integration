@@ -1,14 +1,22 @@
-import 'dart:convert';
+import 'dart:html';
 
 import 'package:dio/dio.dart';
-import 'package:dio_project/model/get_user_model/get_user_model.dart';
-import 'package:get/get.dart';
 
 class APICrudOperation {
   Future<dynamic> getUserMethod(url) {
     return Dio().get(url).then(
       (response) {
         return response;
+      },
+    );
+  }
+
+  postUserMethod(posturl) async {
+    return await Dio().post(
+      posturl,
+      data: {
+        "title": "Muneeb Shahid",
+        "body": "Fluter Developer",
       },
     );
   }
