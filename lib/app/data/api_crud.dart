@@ -32,9 +32,10 @@ class APICrudOperation {
   }
 
   patchUserData(patchurl) async {
-    return await Dio().patch(patchurl,
-    data: {
-      "title": "Muhammad Ali"
-    });
+    return await Dio().patch(patchurl, data: {"title": "Muhammad Ali"});
+  }
+
+  deleteUserData(deleteUrl) async {
+    return await Dio().delete(deleteUrl);
   }
 }

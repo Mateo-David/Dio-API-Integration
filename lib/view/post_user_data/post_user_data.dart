@@ -114,7 +114,19 @@ class PostUserData extends StatelessWidget {
                     "Patch Data",
                     style: TextStyle(fontSize: 15, color: Colors.black),
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    postuserdatacontroller.deleteUserData();
+                  },
+                  child: const Text(
+                    "Delete Data",
+                    style: TextStyle(fontSize: 15, color: Colors.black),
+                  ),
+                ),
               ],
             ),
           ),
