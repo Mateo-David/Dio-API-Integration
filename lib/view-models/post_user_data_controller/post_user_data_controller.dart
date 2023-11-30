@@ -13,10 +13,18 @@ class PostUserDataController extends GetxController {
 
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
   var url = "https://jsonplaceholder.typicode.com/posts";
+  var putUrl = "https://jsonplaceholder.typicode.com/posts/1";
 
   postUserData() async {
     var response = await APICrudOperation().postUserMethod(url);
 
+    var responseBody = response.data;
+    print(responseBody);
+    return responseBody;
+  }
+
+  putUserData() async {
+    var response = await APICrudOperation().putUserData(putUrl);
     var responseBody = response.data;
     print(responseBody);
     return responseBody;

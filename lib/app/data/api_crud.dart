@@ -20,4 +20,11 @@ class APICrudOperation {
       },
     );
   }
+
+  putUserData(putUrl) async {
+    return await Dio().put(putUrl, data: {
+      "title": "Muneeb Shahid putUserData",
+      "body": "Fluter Developer putUserData",
+    },);
+  }
 }
