@@ -1,8 +1,11 @@
-import 'dart:html';
-
 import 'package:dio/dio.dart';
 
+import 'package:dio_project/view-models/post_user_data_controller/post_user_data_controller.dart';
+import 'package:get/get.dart';
+
 class APICrudOperation {
+  PostUserDataController postUserDataController =
+      Get.put(PostUserDataController());
   Future<dynamic> getUserMethod(url) {
     return Dio().get(url).then(
       (response) {
@@ -11,12 +14,19 @@ class APICrudOperation {
     );
   }
 
-  postUserMethod(posturl) async {
+  postUserMethod<PostModel>(
+    posturl,
+  ) async {
     return await Dio().post(
       posturl,
       data: {
-        "title": "Muneeb Shahid",
-        "body": "Fluter Developer",
+        "title": postUserDataController.titleTextEditingController.text,
+        "userId":
+            int.parse(postUserDataController.useridTextEditingController.text)
+                .toInt(),
+        "id": int.parse(postUserDataController.idTextEditingController.text)
+            .toInt(),
+        "body": postUserDataController.bodyTextEditingController.text
       },
     );
   }

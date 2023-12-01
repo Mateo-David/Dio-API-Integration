@@ -64,7 +64,7 @@ class GetDataScreen extends StatelessWidget {
                               ),
                               Text(
                                 getdatacontroller.posts[index].body.toString(),
-                                style: TextStyle(
+                                style:const TextStyle(
                                     fontSize: 20, color: Colors.black),
                               ),
                               SizedBox(

@@ -1,9 +1,11 @@
+import 'package:dio_project/model/post_model_one/post_model_one.dart';
 import 'package:dio_project/view-models/post_user_data_controller/post_user_data_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class PostUserData extends StatelessWidget {
+  PostModel1? postModel1;
   final PostUserDataController postuserdatacontroller =
       Get.put(PostUserDataController());
   PostUserData({super.key});
